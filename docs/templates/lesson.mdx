@@ -4,8 +4,8 @@ description: <ONE-SENTENCE SUMMARY>
 slug: <module>/<lesson-slug>
 ---
 
-import { Aside, LinkButton } from '@astrojs/starlight/components';
-import ResourceBlock from '../_components/ResourceBlock.astro';
+import { Aside, LinkButton } from "@astrojs/starlight/components";
+import ResourceBlock from "../_components/ResourceBlock.astro";
 
 ## Introduction
 
@@ -13,7 +13,7 @@ Write 2–6 short paragraphs. This is **prose-first**.
 Set context. Define the problem. Tell the learner what changes after this lesson.
 
 <Aside type="tip">
-Keep it friendly and table-minded. Avoid “academic tone”.
+  Keep it friendly and table-minded. Avoid “academic tone”.
 </Aside>
 
 ## Lesson
@@ -25,7 +25,7 @@ Use bullets only when they clarify structure (not as a substitute for writing).
 
 ### Another topic
 
-More prose. Add images/videos if they *teach*, not for decoration.
+More prose. Add images/videos if they _teach_, not for decoration.
 
 > Tip: prefer a few strong examples over many weak ones.
 
@@ -56,12 +56,18 @@ Answer in 1–2 sentences each:
     <p>Primary lesson: written by The Ogre Project.</p>
   </div>
 
-  <div slot="supporting">
-    <ul>
-      <li><a href="...">Required reading</a></li>
-      <li><a href="...">Optional resource</a></li>
-    </ul>
-  </div>
+{" "}
+
+<div slot="supporting">
+  <ul>
+    <li>
+      <a href="...">Required reading</a>
+    </li>
+    <li>
+      <a href="...">Optional resource</a>
+    </li>
+  </ul>
+</div>
 
   <div slot="license">
     <p>
@@ -70,5 +76,3 @@ Answer in 1–2 sentences each:
     </p>
   </div>
 </ResourceBlock>
-
-
