@@ -4,6 +4,8 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://theogreproject.github.io',
+	base: '/theogreproject',
 	integrations: [
 		starlight({
 			title: 'My Docs',
