@@ -28,8 +28,10 @@ jobs:
                 cache: pnpm
                 cache-dependency-path: site/pnpm-lock.yaml
 
-            - name: Enable Corepack
-              run: corepack enable
+            - name: Enable Corepack and Activate pnpm
+              run: |
+                corepack enable
+                corepack prepare pnpm@9.15.9 --activate
 
             - name: Install Dependencies
               working-directory: site
