@@ -28,6 +28,8 @@ export default defineConfig({
 					label: 'Getting Started',
 					items: [
 						{ label: 'Start Here', slug: 'start-here' },
+						{ label: 'Lesson: The Quest Loop', slug: 'getting-started/quest-loop'},
+						{ label: 'Ecercise: Learning Log', slug: 'getting-started/quest-loop-learning-log' },
 						{ label: 'How This Curriculum Works', slug: 'how-it-works' },
 						{ label: 'Curriculum Overview', slug: 'curriculum-overview' },
 					],
