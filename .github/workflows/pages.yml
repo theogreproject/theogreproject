@@ -1,61 +1,106 @@
 name: Deploy site to Github Pages
 
 on:
-    push:
-        branches: [main]
-    workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
 
+# Default permissions. We will elevate only where needed.
 permissions:
-    contents: read
-    pages: write
-    id-token: write
+  contents: read
 
 concurrency:
-    group: pages
-    cancel-in-progress: true
+  group: pages
+  cancel-in-progress: true
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout
-              uses: actions/checkout@v4
+  quality:
+    name: Quality check (lint and build)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
-            - name: Setup Node
-              uses: actions/setup-node@v4
-              with:
-                node-version: 22
-                
-            - name: Enable Corepack and Activate pnpm
-              run: |
-                corepack enable
-                corepack prepare pnpm@9.15.9 --activate
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.9
+          run_install: false
 
-            - name: Install Dependencies
-              working-directory: site
-              run: pnpm install --frozen-lockfile
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: site/pnpm-lock.yaml
 
-            - name: Build Site
-              working-directory: site
-              run: pnpm build
+      - name: Install Dependencies
+        run: pnpm -C site install --frozen-lockfile
 
-            - name: Disable Jekyll
-              run: touch site/dist/.nojekyll
+      - name: Lint
+        run: pnpm -C site lint
 
-            - name: Setup Pages
-              uses: actions/configure-pages@v5
+      - name: Build
+        run: pnpm -C site build
 
-            - name: Upload Artifact
-              uses: actions/upload-pages-artifact@v3
-              with:
-                path: site/dist
-    deploy:
-        needs: build
-        runs-on: ubuntu-latest
-        environment:
-            name: github-pages
-            url: ${{ steps.deployment.outputs.page_url }}
-        steps:
-            - name: Deploy to Github Pages
-              id: deployment
-              uses: actions/deploy-pages@v4
+  build:
+    name: Build pages artifact
+    needs: quality
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.9
+          run_install: false
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: site/pnpm-lock.yaml
+
+      - name: Install Dependencies
+        run: pnpm -C site install --frozen-lockfile
+
+      - name: Build Site
+        working-directory: site
+        run: pnpm build
+
+      - name: Disable Jekyll
+        run: touch site/dist/.nojekyll
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/dist
+
+  deploy:
+    name: Deploy to Github Pages
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to Github Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
