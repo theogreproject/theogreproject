@@ -6,6 +6,10 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	site: 'https://theogreproject.github.io',
 	base: '/theogreproject',
+	trailingSlash: 'always',
+	build: {
+		format: 'directory',
+	},
 	integrations: [
 		starlight({
 			title: 'The Ogre Project',
@@ -23,11 +27,20 @@ export default defineConfig({
 				{
 					label: 'Getting Started',
 					items: [
-						// Each item here is one entry in the navigation menu.
 						{ label: 'Start Here', slug: 'start-here' },
 						{ label: 'How This Curriculum Works', slug: 'how-it-works' },
+						{ label: 'Curriculum Overview', slug: 'curriculum-overview' },
 					],
 				},
+				{
+					label: 'Tracks',
+					items: [
+						{ label: 'Player Foundations', slug: 'tracks/player-foundations' },
+						{ label: 'GM 101', slug: 'tracks/gm-101' },
+						{ label: 'Worldbuilding', slug: 'tracks/worldbuilding' },
+						{ label: 'Campaign Ops', slug: 'tracks/campaign-ops' },
+					]
+				}
 			],
 		}),
 	],

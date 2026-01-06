@@ -1,106 +1,76 @@
 ---
 title: The Ogre Project
 description: An open, free curriculum for TTRPG Game Mastering, Worldbuilding, and related skills.
+template: splash
+tableOfContents: false
+hero:
+  title: Learn TTRPG mastery by shipping table-ready work
+  tagline: A free, hands-on curriculum for Game Mastering, Worldbuilding, and the craft around your table.
+  image:
+    file: ../../assets/brand/icon-1024.png
+    alt: The Ogre Project icon
+  actions:
+    - text: Start Here
+      link: ./start-here/
+      icon: right-arrow
+    - text: How It Works
+      link: ./how-it-works/
+      icon: right-arrow      
 ---
 
-import { LinkButton, LinkCard, Card, CardGrid } from '@astrojs/starlight/components';
+import { Aside, Badge, Card, CardGrid, LinkButton, LinkCard, Steps } from '@astrojs/starlight/components';
 
-A free, structured curriculum for **Tabletop Roleplaying Games (TTRPGs)**: learn the fundamentals of play, level up into confident Game Mastering, and grow into worldbuilding and adventure design, using **open resources** and **hands-on practice**.
+<Aside type="note">
+No gatekeeping. No "read 900 pages first." This is a **course**: you'll learn by building small, usable artifacts, one quest at a time!
+</Aside>
 
-<div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginTop: '1rem' }}>
-  <LinkButton href="./start-here" variant="primary">Start here</LinkButton>
-  <LinkButton href="./how-it-works" variant="secondary">How this curriculum works</LinkButton>
-</div>
+## The quest loop
 
-:::note
-The primary language is **English**. A Portuguese version will be added progressively.
-:::
+<Steps>
 
----
+1. **Read** a focused lesson (short, actionable, table-minded)
 
-## What you’ll learn
+2. **Practice** with an exercise that forces decisions.
 
-This curriculum is **system-agnostic**: it focuses on skills that transfer across games (D&D, Pathfinder, Call of Cthulhu, OSR, indie TTRPGs, and beyond).
+3. **Ship** a deliverable you can actually use: a scene, a hook, a faction, a handout, a prep pack, and more!
+
+</Steps>
+
+## Tracks
 
 <CardGrid>
+
   <Card title="Player Foundations">
-    Become a better player first: table etiquette, spotlight sharing, collaboration, character goals, and how to help your GM run great sessions.
+    <p><Badge text="Planned" variant="note" /> Characters that create story momentum at the table.</p>
+    <p><small>Backstories, goals, flags, teamwork glue — without the cringe.</small></p>
   </Card>
 
   <Card title="GM 101">
-    Run your first sessions with confidence: scene framing, rulings, pacing, descriptions, NPC play, encounters, and session structure.
+    <p><Badge text="Planned" variant="note" /> Run better sessions with less stress.</p>
+    <p><small>Prep loops, pacing, spotlight, rulings, and table energy.</small></p>
   </Card>
 
-  <Card title="Session Prep & Tools">
-    Build a reusable prep workflow: notes that don’t bloat, strong hooks, improv scaffolding, and “just enough” structure to stay flexible.
+  <Card title="Worldbuilding">
+    <p><Badge text="Planned" variant="note" /> Build worlds that generate adventures.</p>
+    <p><small>Factions, fronts, maps, lore… only what creates play.</small></p>
   </Card>
 
-  <Card title="Worldbuilding that Serves Play">
-    Create worlds that generate adventure: factions, locations, frontiers, mysteries, and constraints — without writing a novel.
+  <Card title="Campaign Ops">
+    <p><Badge text="Planned" variant="note" /> Keep continuity without becoming a librarian.</p>
+    <p><small>Notes, recaps, tracking, publishing, and sustainable long campaigns.</small></p>
   </Card>
 
-  <Card title="Adventure Design">
-    Design one-shots and campaigns: nodes, clues, fail-forward, meaningful choices, and player-driven progression.
-  </Card>
-
-  <Card title="Publishing & Sharing">
-    Turn your work into clean modules: formatting, editing checklists, playtest loops, and open-licensed publishing basics.
-  </Card>
 </CardGrid>
 
----
-
-## How it works
-
-The Ogre Project is built like a practical apprenticeship:
-
-- **Lessons** explain a single concept clearly.
-- **Exercises** train one skill at a time.
-- **Projects** produce something you can actually use at the table.
-- **Optional resources** link to great free material so you can go deeper.
-
-:::tip
-If you want TOP vibes: think “learn by doing,” but the output isn’t an app — it’s a **session**, an **adventure**, a **toolkit**, or a **world**.
-:::
-
----
-
-## What you’ll build
-
-By progressing through the curriculum, you’ll assemble a personal GM portfolio such as:
-
-- A **session-ready one-shot** (with hooks, scenes, and contingencies)
-- A **GM prep template** you can reuse forever
-- A **small starter region** (locations + factions + problems)
-- A **node-based mystery** with clues and fail-forward paths
-- A **short adventure module** formatted for sharing
-
----
-
-## Who this is for
-
-- You want to GM but don’t know where to start.
-- You already GM and want a stronger method (prep, pacing, encounters, improvisation).
-- You love worldbuilding but want it to create **playable** content.
-- You’re building a community table and want consistent, teachable practices.
-
----
-
-## Open, free, and community-driven
-
-Everything we publish here is meant to stay **free** and **open**.
-We write the lessons ourselves, then link to free resources as supporting material.
-
-- Code: MIT
-- Content: CC BY 4.0
-
----
+<Aside type="tip">
+Want a step-by-step path? Start with **Start Here**, then follow the workflow in **How it works**. Tracks will light up as modules go from <Badge text="Planned" variant="note" /> to <Badge text="Live" variant="success" />.
+</Aside>
 
 ## Next steps
 
 <CardGrid>
-  <LinkCard title="Start here" href="./start-here" />
-  <LinkCard title="Curriculum structure" href="./how-it-works" />
+  <LinkCard title="Start Here" href="./start-here/" description="Set up your study routine and ship your first tiny deliverable." />
+  <LinkCard title="How this curriculum works" href="./how-it-works/" description="Understand the lesson → exercise → project structure and the ‘ship’ mindset." />
 </CardGrid>
 
 ---
