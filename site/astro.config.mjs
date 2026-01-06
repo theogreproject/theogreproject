@@ -31,6 +31,17 @@ export default defineConfig({
       editLink: {
         baseUrl: 'https://github.com/theogreproject/theogreproject/edit/main/site/',
       },
+      defaultLocale: 'root',
+      locales: {
+        root: {
+          label: 'English',
+          lang: 'en',
+        },
+        'pt-br': {
+          label: 'Português (Brasil)',
+          lang: 'pt-BR',
+        },
+      },
       sidebar: [
         {
           label: 'Getting Started',
