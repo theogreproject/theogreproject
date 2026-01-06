@@ -8,8 +8,17 @@ export default defineConfig({
 	base: '/theogreproject',
 	integrations: [
 		starlight({
-			title: 'My Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			title: 'The Ogre Project',
+			description: 'An open, free curriculum to teach TTRPG Game Mastering, Worldbuilding, and related skills.',
+			logo: {
+				src: './src/assets/brand/icon-256.png',
+				alt: 'The Ogre Project',
+			},
+			favicon: '/favicon.ico',
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/theogreproject/theogreproject' }],
+			editLink: {
+				baseUrl: 'https://github.com/theogreproject/theogreproject/edit/main/site/'
+			},
 			sidebar: [
 				{
 					label: 'Guides',
