@@ -20,6 +20,7 @@ export default defineConfig({
 			},
 			favicon: '/favicon.ico',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/theogreproject/theogreproject' }],
+			customCss: ['./src/styles/ogre.css'],
 			editLink: {
 				baseUrl: 'https://github.com/theogreproject/theogreproject/edit/main/site/'
 			},

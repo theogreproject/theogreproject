@@ -1,0 +1,34 @@
+---
+const {
+    title = 'Resources',
+    primaryLabel = 'Primary lesson',
+    supportingLabel = 'Supporting resources',
+    licenseLabel = 'License / attribution note',
+} = Astro.props;
+---
+
+<section class="og-resource">
+
+    <div class="og-resource__grid">
+        <div class="og-resource__col">
+            <h3 class="og-resource__label">{primaryLabel}</h3>
+            <div class="og-resource__body">
+                <slot name="primary" />
+            </div>
+        </div>
+
+        <div class="og-resource__col">
+            <h3 class="og-resource__label">{supportingLabel}</h3>
+            <div class="og-resource__body">
+                <slot name="supporting" />
+            </div>
+        </div>
+
+        <div class="og-resource__col">
+            <h3 class="og-resource__label">{licenseLabel}</h3>
+            <div class="og-resource__body">
+                <slot name="license" />
+            </div>
+        </div>
+    </div>
+</section>

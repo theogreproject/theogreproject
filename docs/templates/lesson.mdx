@@ -5,6 +5,7 @@ slug: <module>/<lesson-slug>
 ---
 
 import { Aside, LinkButton } from '@astrojs/starlight/components';
+import ResourceBlock from '../_components/ResourceBlock.astro';
 
 ## Introduction
 
@@ -48,7 +49,26 @@ Answer in 1–2 sentences each:
 - …
 - …
 
-## Additional resources (optional)
+## Additional Resources
 
-- …
+<ResourceBlock>
+  <div slot="primary">
+    <p>Primary lesson: written by The Ogre Project.</p>
+  </div>
+
+  <div slot="supporting">
+    <ul>
+      <li><a href="...">Required reading</a></li>
+      <li><a href="...">Optional resource</a></li>
+    </ul>
+  </div>
+
+  <div slot="license">
+    <p>
+      External resources are linked to their original sources. Add attribution if required.
+      See <code>ATTRIBUTION.md</code>.
+    </p>
+  </div>
+</ResourceBlock>
+
 

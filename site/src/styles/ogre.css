@@ -1,0 +1,40 @@
+/* Ogre Project global styles */
+
+.og-resource {
+  border: 1px solid var(--sl-color-gray-5, #e5e7eb);
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  background: var(--sl-color-bg, #fff);
+}
+
+.og-resource__title {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.1rem;
+}
+
+.og-resource__grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 900px) {
+  .og-resource__grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.og-resource__label {
+  margin: 0 0 0.35rem 0;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.og-resource__body p {
+  margin: 0.25rem 0;
+}
+
+.og-resource__body ul {
+  margin: 0.25rem 0 0.25rem 1.1rem;
+}

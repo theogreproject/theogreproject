@@ -5,6 +5,7 @@ slug: getting-started/quest-loop
 ---
 
 import { Aside, LinkButton } from '@astrojs/starlight/components';
+import ResourceBlock from '../_components/ResourceBlock.astro';
 
 ## Introduction
 
@@ -64,3 +65,32 @@ Answer in 1–2 sentences:
 - Why do constraints help you practice?
 - What’s the difference between “a cool idea” and “a shipped artifact”?
 - If you only have one session this week, what do you do?
+
+## Resources
+
+<ResourceBlock>
+  <div slot="primary">
+    <p>
+      This lesson is original Ogre Project content. It’s the “primary lesson” for this page.
+    </p>
+  </div>
+
+  <div slot="supporting">
+    <ul>
+      <li>
+        <a href="https://www.theodinproject.com/lessons/ruby-variables">Example of a TOP lesson structure</a>
+        (structure reference; we link, we don’t copy)
+      </li>
+      <li>
+        <a href="https://diataxis.fr/">Diátaxis</a> (helpful mental model for lesson vs how-to vs reference)
+      </li>
+    </ul>
+  </div>
+
+  <div slot="license">
+    <p>
+      External resources are linked to their original sources and remain under their own licenses/copyright.
+      For our internal attribution norms, see <code>ATTRIBUTION.md</code>.
+    </p>
+  </div>
+</ResourceBlock>
