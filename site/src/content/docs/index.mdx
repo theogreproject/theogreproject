@@ -1,42 +1,110 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
-hero:
-  tagline: Congrats on setting up a new Starlight project!
-  image:
-    file: ../../assets/houston.webp
-  actions:
-    - text: Example Guide
-      link: /guides/example/
-      icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
+title: The Ogre Project
+description: An open, free curriculum for TTRPG Game Mastering, Worldbuilding, and related skills.
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { LinkButton, LinkCard, Card, CardGrid } from '@astrojs/starlight/components';
+
+A free, structured curriculum for **Tabletop Roleplaying Games (TTRPGs)**: learn the fundamentals of play, level up into confident Game Mastering, and grow into worldbuilding and adventure design, using **open resources** and **hands-on practice**.
+
+<div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginTop: '1rem' }}>
+  <LinkButton href="./start-here" variant="primary">Start here</LinkButton>
+  <LinkButton href="./how-it-works" variant="secondary">How this curriculum works</LinkButton>
+</div>
+
+:::note
+The primary language is **English**. A Portuguese version will be added progressively.
+:::
+
+---
+
+## What you’ll learn
+
+This curriculum is **system-agnostic**: it focuses on skills that transfer across games (D&D, Pathfinder, Call of Cthulhu, OSR, indie TTRPGs, and beyond).
+
+<CardGrid>
+  <Card title="Player Foundations">
+    Become a better player first: table etiquette, spotlight sharing, collaboration, character goals, and how to help your GM run great sessions.
+  </Card>
+
+  <Card title="GM 101">
+    Run your first sessions with confidence: scene framing, rulings, pacing, descriptions, NPC play, encounters, and session structure.
+  </Card>
+
+  <Card title="Session Prep & Tools">
+    Build a reusable prep workflow: notes that don’t bloat, strong hooks, improv scaffolding, and “just enough” structure to stay flexible.
+  </Card>
+
+  <Card title="Worldbuilding that Serves Play">
+    Create worlds that generate adventure: factions, locations, frontiers, mysteries, and constraints — without writing a novel.
+  </Card>
+
+  <Card title="Adventure Design">
+    Design one-shots and campaigns: nodes, clues, fail-forward, meaningful choices, and player-driven progression.
+  </Card>
+
+  <Card title="Publishing & Sharing">
+    Turn your work into clean modules: formatting, editing checklists, playtest loops, and open-licensed publishing basics.
+  </Card>
+</CardGrid>
+
+---
+
+## How it works
+
+The Ogre Project is built like a practical apprenticeship:
+
+- **Lessons** explain a single concept clearly.
+- **Exercises** train one skill at a time.
+- **Projects** produce something you can actually use at the table.
+- **Optional resources** link to great free material so you can go deeper.
+
+:::tip
+If you want TOP vibes: think “learn by doing,” but the output isn’t an app — it’s a **session**, an **adventure**, a **toolkit**, or a **world**.
+:::
+
+---
+
+## What you’ll build
+
+By progressing through the curriculum, you’ll assemble a personal GM portfolio such as:
+
+- A **session-ready one-shot** (with hooks, scenes, and contingencies)
+- A **GM prep template** you can reuse forever
+- A **small starter region** (locations + factions + problems)
+- A **node-based mystery** with clues and fail-forward paths
+- A **short adventure module** formatted for sharing
+
+---
+
+## Who this is for
+
+- You want to GM but don’t know where to start.
+- You already GM and want a stronger method (prep, pacing, encounters, improvisation).
+- You love worldbuilding but want it to create **playable** content.
+- You’re building a community table and want consistent, teachable practices.
+
+---
+
+## Open, free, and community-driven
+
+Everything we publish here is meant to stay **free** and **open**.
+We write the lessons ourselves, then link to free resources as supporting material.
+
+- Code: MIT
+- Content: CC BY 4.0
+
+---
 
 ## Next steps
 
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+<CardGrid>
+  <LinkCard title="Start here" href="./start-here" />
+  <LinkCard title="Curriculum structure" href="./how-it-works" />
 </CardGrid>
 
-> MVP is live locally. Next: GitHub Pages.
+---
+
+### Contribute
+
+This project is open-source. If you’d like to help (writing, editing, reviewing, translations), check the repository on GitHub.
