@@ -45,21 +45,23 @@ export default defineConfig({
       sidebar: [
         {
           label: 'Getting Started',
+          translations: { 'pt-BR': 'Primeiros Passos' },
           items: [
-            { label: 'Start Here', slug: 'start-here' },
-            { label: 'Lesson: The Quest Loop', slug: 'getting-started/quest-loop' },
-            { label: 'Exercise: Learning Log', slug: 'getting-started/quest-loop-learning-log' },
-            { label: 'How This Curriculum Works', slug: 'how-it-works' },
-            { label: 'Curriculum Overview', slug: 'curriculum-overview' },
+            { slug: 'start-here' },
+            { slug: 'getting-started/quest-loop' },
+            { slug: 'getting-started/quest-loop-learning-log' },
+            { slug: 'how-it-works' },
+            { slug: 'curriculum-overview' },
           ],
         },
         {
           label: 'Tracks',
+          translations: { 'pt-BR': 'Trilhas' },
           items: [
-            { label: 'Player Foundations', slug: 'tracks/player-foundations' },
-            { label: 'GM 101', slug: 'tracks/gm-101' },
-            { label: 'Worldbuilding', slug: 'tracks/worldbuilding' },
-            { label: 'Campaign Ops', slug: 'tracks/campaign-ops' },
+            { slug: 'tracks/player-foundations' },
+            { slug: 'tracks/gm-101' },
+            { slug: 'tracks/worldbuilding' },
+            { slug: 'tracks/campaign-ops' },
           ],
         },
       ],
