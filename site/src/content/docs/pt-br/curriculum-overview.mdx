@@ -1,0 +1,73 @@
+---
+title: Visão Geral do Currículo
+description: O mapa completo do curso — o que está ativo, o que está planejado e o que você vai entregar.
+---
+
+import { Aside, Badge, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+Este é o **mapa do curso**. Ele foi projetado para ser prático:
+cada módulo é uma linha de missões, e cada linha de missões termina com algo que você pode realmente usar na mesa de jogo.
+
+<Aside type="note">
+  Status dos módulos:
+  <Badge text="No Ar" variant="success" /> pronto para o uso,
+  <Badge text="Rascunho" variant="caution" /> funcional, mas ainda em desenvolvimento,
+  <Badge text="Planejado" variant="note" /> chegando em breve.
+</Aside>
+
+## Orientação (módulos iniciais)
+
+<CardGrid>
+  <LinkCard
+    title="Comece Aqui"
+    href="../start-here/"
+    description="Estabeleça uma rotina e entregue seu primeiro pequeno artefato."
+  />
+  <LinkCard
+    title="Como Funciona Este Currículo"
+    href="../how-it-works/"
+    description="Entenda o ciclo de Leitura → Prática → Entrega."
+  />
+</CardGrid>
+
+| Módulo                                           | Status                                   | O que você irá gerar                                    |
+| ------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------- |
+| [Comece Aqui](../start-here/)                    | <Badge text="No Ar" variant="success" /> | Uma **Promessa de Campanha** (1 parágrafo e 3 tópicos)  |
+| [Como Funciona Este Currículo](../how-it-works/) | <Badge text="No Ar" variant="success" /> | Um fluxo de trabalho que você pode repetir semanalmente |
+
+## Trilhas (linhas de missões)
+
+<CardGrid>
+  <LinkCard
+    title="Fundamentos do Jogador"
+    href="../tracks/player-foundations/"
+    description="Personagens que criam impulso narrativo na mesa."
+  />
+  <LinkCard
+    title="Mestre Iniciante"
+    href="../tracks/gm-101/"
+    description="Conduza sessões melhores com menos estresse."
+  />
+  <LinkCard
+    title="Criação de Mundos"
+    href="../tracks/worldbuilding/"
+    description="Construa mundos que geram aventuras."
+  />
+  <LinkCard
+    title="Operações de Campanha"
+    href="../tracks/campaign-ops/"
+    description="Continuidade, anotações, publicação e campanhas sustentáveis."
+  />
+</CardGrid>
+
+| Trilha                                                  | Status                                    | A promessa                                                                                     |
+| ------------------------------------------------------- | ----------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| [Fundamentos do Jogador](../tracks/player-foundations/) | <Badge text="Planejado" variant="note" /> | Personagens melhores: metas mais claras, trabalho em equipe mais forte, jogabilidade mais rica |
+| [Mestre Iniciante](../tracks/gm-101/)                   | <Badge text="Planejado" variant="note" /> | Sessões melhores: ritmo, destaque, decisões, ciclos de preparação                              |
+| [Criação de Mundos](../tracks/worldbuilding/)           | <Badge text="Planejado" variant="note" /> | Mundos melhores: facções + frentes + ganchos que escrevem por si mesmos                        |
+| [Operações de Campanha](../tracks/campaign-ops/)        | <Badge text="Planejado" variant="note" /> | Maior duração: continuidade sem burnout                                                        |
+
+<Aside type="tip">
+  Esta página evoluirá para uma grade de módulos completa assim que a primeira faixa passar de{' '}
+  <Badge text="Planejado" variant="note" /> para <Badge text="Rascunho" variant="caution" />.
+</Aside>

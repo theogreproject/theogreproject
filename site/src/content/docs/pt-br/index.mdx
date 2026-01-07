@@ -1,14 +1,119 @@
 ---
 title: The Ogre Project
-description: Uma plataforma de aprendizado de TTRPG (PT-BR em construção).
+description: Um currículo aberto e gratuito para Game Mastering, Worldbuilding e habilidades relacionadas a TTRPG.
 template: splash
+tableOfContents: false
+hero:
+  title: Aprenda a dominar os RPGs de mesa entregando trabalhos prontos para jogar.
+  tagline: Um currículo gratuito e prático para mestrar jogos de RPG de mesa, criar mundos e dominar a arte ao redor da sua mesa.
+  image:
+    file: ../../../assets/brand/icon-1024.png
+    alt: The Ogre Project icon
+  actions:
+    - text: Comece aqui
+      link: ./start-here/
+      icon: right-arrow
+    - text: Como Funciona
+      link: ./how-it-works/
+      icon: right-arrow
 ---
 
-## PT-BR (work in progress)
+import {
+  Aside,
+  Badge,
+  Card,
+  CardGrid,
+  LinkButton,
+  LinkCard,
+  Steps,
+} from '@astrojs/starlight/components';
 
-Estamos preparando a versão em português.
+<Aside type="note">
+  Sem gatekeeping. Sem "leia 900 páginas primeiro." Isto é um **curso**: você aprenderá construindo
+  pequenos artefatos utilizáveis, uma missão de cada vez!
+</Aside>
 
-Enquanto isso, você pode começar por aqui:
+## O ciclo da missão
 
-- [Start Here](./start-here/)
-- [How it works](./how-it-works/)
+<Steps>
+
+1. **Leia** uma lição focada, curta, prática e voltada para a mesa.
+
+2. **Pratique** com um exercício que exija decisões.
+
+3. **Entregue** algo que você possa realmente usar: uma cena, um gancho, uma facção, um material de apoio, um pacote de preparação e muito mais!
+
+</Steps>
+
+## Trilhas
+
+<CardGrid>
+
+<Card title="Fundamentos para Jogadores">
+  <p>
+    <Badge text="Planejado" variant="note" /> Personagens que criam impulso narrativo para a mesa.
+  </p>
+  <p>
+    <small>
+      Histórias de fundo, objetivos, bandeiras, espírito de equipe, sem constrangimentos.
+    </small>
+  </p>
+</Card>
+
+<Card title="Mestres Iniciantes">
+  <p>
+    <Badge text="Planejado" variant="note" /> Conduza sessões melhores com menos estresse.
+  </p>
+  <p>
+    <small>Prepare ciclos, ritmo, destaque, regras e energia da mesa.</small>
+  </p>
+</Card>
+
+<Card title="Criação de Mundos">
+  <p>
+    <Badge text="Planejado" variant="note" /> Construa mundos que geram aventuras.
+  </p>
+  <p>
+    <small>Facções, frentes, mapas, história... apenas o que cria jogabilidade.</small>
+  </p>
+</Card>
+
+<Card title="Operações de Campanha">
+  <p>
+    <Badge text="Planejado" variant="note" /> Mantenha continuidade sem se tornar um bibliotecári.
+  </p>
+  <p>
+    <small>
+      Anotações, resumos, acompanhamento, publicação e campanhas de longo prazo sustentáveis.
+    </small>
+  </p>
+</Card>
+
+</CardGrid>
+
+<Aside type="tip">
+  Quer um caminho passo a passo? Comece em **Comece Aqui** e siga o fluxo de trabalho em **Como
+  Funciona**. Os indicadores serão destacados à medida que os módulos passarem de{' '}
+  <Badge text="Planejado" variant="note" /> para <Badge text="No Ar" variant="success" />.
+</Aside>
+
+## Próximos Passos
+
+<CardGrid>
+  <LinkCard
+    title="Comece Aqui"
+    href="./start-here/"
+    description="Dê início à sua rotina de estudos e entregue sua primeira pequena missão."
+  />
+  <LinkCard
+    title="Como Funciona"
+    href="./how-it-works/"
+    description="Entenda a estrutura de lição → exercício → projeto e a mentalidade de 'entregar'."
+  />
+</CardGrid>
+
+---
+
+### Contribua
+
+Este projeto é de código aberto. Se você quiser ajudar (escrita, edição, revisão, tradução), confira o repositório no GitHub.
