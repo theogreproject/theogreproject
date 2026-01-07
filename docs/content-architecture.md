@@ -40,6 +40,7 @@ Every page that must keep a stable URL should set a `slug:`.
 Examples:
 
 - Start Here page:
+
   - file: `00-getting-started/start-here.mdx`
   - frontmatter: `slug: start-here`
   - URL: `/start-here/`
@@ -51,11 +52,13 @@ Examples:
 
 ## Internal links
 
-Prefer **root-relative** internal links:
+Prefer **relative internal links** to avoid breaking deployments under a base path (GitHub Pages).
 
-- ✅ `/start-here/`
-- ✅ `/tracks/worldbuilding/`
-- ❌ `./tracks/worldbuilding/` (can become fragile after moves)
+- ✅ `./start-here/`
+- ✅ `../tracks/worldbuilding/`
+- ❌ `/start-here/` (can ignore the base path and break in production)
+
+Rule of thumb: if it points to another page inside the docs, keep it relative.
 
 ## Page naming (when we start producing lessons)
 
@@ -67,6 +70,12 @@ Within a module folder, future pages follow a predictable pattern:
 
 Keep filenames lowercase, hyphenated, and descriptive.
 
+## Translations (i18n)
+
+English is the source of truth. PT-BR is added progressively (RDS).
+
+See: [`docs/translation-workflow.md`](translation-workflow.md).
+
 ## New page checklist
 
 Before opening a PR:
@@ -74,5 +83,5 @@ Before opening a PR:
 - [ ] File is in the correct numbered module folder.
 - [ ] `title` and `description` are present.
 - [ ] `slug` is set if URL stability matters.
-- [ ] Links are root-relative.
+- [ ] Internal links are relative (avoid `/...` links that can break under a base path).
 - [ ] Build passes: `pnpm -C site build`

@@ -32,6 +32,10 @@ Repo documentation for maintainers:
 
 [This document](docs/content-architecture.md) explains our numbered folders and how `slug:` keeps URLs stable. Please read it before contributing.
 
+### Translation workflow (i18n)
+
+If you're translating or adding a new locale, follow: [`docs/translation-workflow.md`](docs/translation-workflow.md).
+
 ## Writing standards (lightweight)
 
 We write **prose-first**, friendly, and table-minded.
@@ -63,7 +67,7 @@ Before you open a PR, confirm:
 - [ ] File is in the correct module folder (`site/src/content/docs/...`)
 - [ ] Frontmatter includes `title` and `description`
 - [ ] Frontmatter includes a stable `slug` when URL stability matters
-- [ ] Internal links are root-relative when possible (`/start-here/`, not `./start-here`)
+- [ ] [ ] Internal links are relative (`./start-here/`, `../tracks/gm-101/`) to avoid base-path issues on GitHub Pages
 - [ ] Resources/attribution are correct (see `ATTRIBUTION.md`)
 - [ ] `pnpm -C site build` passes
 
