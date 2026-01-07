@@ -30,7 +30,7 @@ Repo documentation for maintainers:
 
 ### Content architecture (source of truth)
 
-[This document](docs/content-architecture.md) explains our numbered folders and how `slug:` keeps URLs stable. Please read it before contributing.
+[This document](docs/content-architecture.md) explains our numbered folders, `slug:` rules, and internal links (DocLink). Please read it before contributing.
 
 ### Translation workflow (i18n)
 
@@ -67,7 +67,7 @@ Before you open a PR, confirm:
 - [ ] File is in the correct module folder (`site/src/content/docs/...`)
 - [ ] Frontmatter includes `title` and `description`
 - [ ] Frontmatter includes a stable `slug` when URL stability matters
-- [ ] [ ] Internal links are relative (`./start-here/`, `../tracks/gm-101/`) to avoid base-path issues on GitHub Pages
+- [ ] Internal links use `DocLink` (see `docs/content-architecture.md`)
 - [ ] Resources/attribution are correct (see `ATTRIBUTION.md`)
 - [ ] `pnpm -C site build` passes
 

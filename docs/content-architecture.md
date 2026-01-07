@@ -52,13 +52,28 @@ Examples:
 
 ## Internal links
 
-Prefer **relative internal links** to avoid breaking deployments under a base path (GitHub Pages).
+Use the `DocLink` component for internal navigation so links:
 
-- ✅ `./start-here/`
-- ✅ `../tracks/worldbuilding/`
-- ❌ `/start-here/` (can ignore the base path and break in production)
+- respect the `base` path (GitHub Pages)
+- automatically add the locale prefix when you’re in `/pt-br/`
 
-Rule of thumb: if it points to another page inside the docs, keep it relative.
+Example:
+
+```mdx
+import DocLink from '../_components/DocLink.astro';
+
+<DocLink href="how-it-works">How This Course Works</DocLink>
+```
+
+Rule of thumb: if it points to another page inside the docs, use `DocLink` with a slug (no leading `/`).
+
+For card links, use `DocLinkCard`:
+
+```mdx
+import DocLinkCard from '../_components/DocLinkCard.astro';
+
+<DocLinkCard title="Start Here" href="start-here" />
+```
 
 ## Page naming (when we start producing lessons)
 
@@ -75,6 +90,9 @@ Keep filenames lowercase, hyphenated, and descriptive.
 English is the source of truth. PT-BR is added progressively (RDS).
 
 See: [`docs/translation-workflow.md`](translation-workflow.md).
+
+Locale folders follow the `xx-yy` pattern (two letters + dash + two letters), with the last two in
+lowercase (example: `pt-br`). `DocLink` and `DocLinkCard` detect locales from this folder pattern.
 
 ## New page checklist
 

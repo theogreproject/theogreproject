@@ -18,15 +18,8 @@ hero:
       icon: right-arrow
 ---
 
-import {
-  Aside,
-  Badge,
-  Card,
-  CardGrid,
-  LinkButton,
-  LinkCard,
-  Steps,
-} from '@astrojs/starlight/components';
+import { Aside, Badge, Card, CardGrid, Steps } from '@astrojs/starlight/components';
+import DocLinkCard from './_components/DocLinkCard.astro';
 
 <Aside type="note">
   No gatekeeping. No "read 900 pages first." This is a **course**: you'll learn by building small,
@@ -49,39 +42,66 @@ import {
 
 <CardGrid>
 
-<Card title="Player Foundations">
+<Card title="Track 0 — Player">
   <p>
-    <Badge text="Planned" variant="note" /> Characters that create story momentum at the table.
+    <Badge text="Planned" variant="note" /> Collaborate, improvise, and build playable characters.
   </p>
   <p>
-    <small>Backstories, goals, flags, teamwork glue — without the cringe.</small>
-  </p>
-</Card>
-
-<Card title="GM 101">
-  <p>
-    <Badge text="Planned" variant="note" /> Run better sessions with less stress.
-  </p>
-  <p>
-    <small>Prep loops, pacing, spotlight, rulings, and table energy.</small>
+    <small>Player types, spotlight, intent, and table-aware choices.</small>
   </p>
 </Card>
 
-<Card title="Worldbuilding">
+<Card title="Track 1 — Table">
   <p>
-    <Badge text="Planned" variant="note" /> Build worlds that generate adventures.
+    <Badge text="Planned" variant="note" /> Facilitate Session Zero and protect table health.
   </p>
   <p>
-    <small>Factions, fronts, maps, lore… only what creates play.</small>
+    <small>Safety, expectations, pacing, conflict handling, debrief.</small>
   </p>
 </Card>
 
-<Card title="Campaign Ops">
+<Card title="Track 2 — Session">
   <p>
-    <Badge text="Planned" variant="note" /> Keep continuity without becoming a librarian.
+    <Badge text="Planned" variant="note" /> Run strong sessions with low prep.
   </p>
   <p>
-    <small>Notes, recaps, tracking, publishing, and sustainable long campaigns.</small>
+    <small>Scenes, clues, structured improv, choice-driven play.</small>
+  </p>
+</Card>
+
+<Card title="Track 3 — Challenges &amp; Conflict">
+  <p>
+    <Badge text="Planned" variant="note" /> Design fair, varied encounters that matter.
+  </p>
+  <p>
+    <small>Combat &amp; non-combat, hazards, puzzles, mobs, NPC control.</small>
+  </p>
+</Card>
+
+<Card title="Track 4 — Campaigns">
+  <p>
+    <Badge text="Planned" variant="note" /> Scale from one-shots to living worlds.
+  </p>
+  <p>
+    <small>Engines, styles, recurring NPCs, PC arcs, encounters.</small>
+  </p>
+</Card>
+
+<Card title="Track 5 — Worldbuilding">
+  <p>
+    <Badge text="Planned" variant="note" /> Build worlds that serve play.
+  </p>
+  <p>
+    <small>Truths, layers of scope, usable history, maps.</small>
+  </p>
+</Card>
+
+<Card title="Track 6 — Publication">
+  <p>
+    <Badge text="Planned" variant="note" /> Package your work for others to run.
+  </p>
+  <p>
+    <small>Writing for the table, playtesting, layout, formats.</small>
   </p>
 </Card>
 
@@ -96,14 +116,14 @@ import {
 ## Next steps
 
 <CardGrid>
-  <LinkCard
+  <DocLinkCard
     title="Start Here"
-    href="./start-here/"
+    href="start-here"
     description="Set up your study routine and ship your first tiny deliverable."
   />
-  <LinkCard
+  <DocLinkCard
     title="How this curriculum works"
-    href="./how-it-works/"
+    href="how-it-works"
     description="Understand the lesson → exercise → project structure and the ‘ship’ mindset."
   />
 </CardGrid>

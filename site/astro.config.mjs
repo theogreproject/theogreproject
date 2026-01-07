@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import rehypeExternalLinks from 'rehype-external-links';
 
 // https://astro.build/config
 export default defineConfig({
@@ -9,6 +10,9 @@ export default defineConfig({
   trailingSlash: 'always',
   build: {
     format: 'directory',
+  },
+  markdown: {
+    rehypePlugins: [[rehypeExternalLinks, { target: '_blank', rel: ['noopener', 'noreferrer'] }]],
   },
   integrations: [
     starlight({
@@ -48,10 +52,10 @@ export default defineConfig({
           translations: { 'pt-BR': 'Primeiros Passos' },
           items: [
             { slug: 'start-here' },
-            { slug: 'getting-started/quest-loop' },
-            { slug: 'getting-started/quest-loop-learning-log' },
             { slug: 'how-it-works' },
-            { slug: 'curriculum-overview' },
+            { slug: 'what-youll-need' },
+            { slug: 'set-your-rhythm' },
+            { slug: 'playtesting-without-pressure' },
           ],
         },
         {
@@ -63,6 +67,11 @@ export default defineConfig({
             { slug: 'tracks/worldbuilding' },
             { slug: 'tracks/campaign-ops' },
           ],
+        },
+        {
+          label: 'Resources',
+          translations: { 'pt-BR': 'Recursos' },
+          items: [{ slug: 'syllabus' }],
         },
       ],
     }),

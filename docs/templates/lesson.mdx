@@ -5,6 +5,7 @@ slug: <module>/<lesson-slug>
 ---
 
 import { Aside, LinkButton } from "@astrojs/starlight/components";
+import DocLink from "../_components/DocLink.astro";
 import ResourceBlock from "../_components/ResourceBlock.astro";
 
 ## Introduction
@@ -61,10 +62,10 @@ Answer in 1–2 sentences each:
 <div slot="supporting">
   <ul>
     <li>
-      <a href="...">Required reading</a>
+      <DocLink href="...">Related lesson</DocLink>
     </li>
     <li>
-      <a href="...">Optional resource</a>
+      <a href="https://...">External resource</a>
     </li>
   </ul>
 </div>

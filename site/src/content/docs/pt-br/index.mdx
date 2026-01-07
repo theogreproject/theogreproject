@@ -18,15 +18,8 @@ hero:
       icon: right-arrow
 ---
 
-import {
-  Aside,
-  Badge,
-  Card,
-  CardGrid,
-  LinkButton,
-  LinkCard,
-  Steps,
-} from '@astrojs/starlight/components';
+import { Aside, Badge, Card, CardGrid, Steps } from '@astrojs/starlight/components';
+import DocLinkCard from '../_components/DocLinkCard.astro';
 
 <Aside type="note">
   Sem gatekeeping. Sem "leia 900 páginas primeiro." Isto é um **curso**: você aprenderá construindo
@@ -49,43 +42,66 @@ import {
 
 <CardGrid>
 
-<Card title="Fundamentos para Jogadores">
+<Card title="Trilha 0 — Jogador">
   <p>
-    <Badge text="Planejado" variant="note" /> Personagens que criam impulso narrativo para a mesa.
+    <Badge text="Planejado" variant="note" /> Colabore, improvise e crie personagens jogáveis.
   </p>
   <p>
-    <small>
-      Histórias de fundo, objetivos, bandeiras, espírito de equipe, sem constrangimentos.
-    </small>
+    <small>Tipos de jogador, spotlight, intenção e escolhas de mesa.</small>
   </p>
 </Card>
 
-<Card title="Mestres Iniciantes">
+<Card title="Trilha 1 — Mesa">
   <p>
-    <Badge text="Planejado" variant="note" /> Conduza sessões melhores com menos estresse.
+    <Badge text="Planejado" variant="note" /> Facilite a Sessão Zero e proteja a saúde da mesa.
   </p>
   <p>
-    <small>Prepare ciclos, ritmo, destaque, regras e energia da mesa.</small>
-  </p>
-</Card>
-
-<Card title="Criação de Mundos">
-  <p>
-    <Badge text="Planejado" variant="note" /> Construa mundos que geram aventuras.
-  </p>
-  <p>
-    <small>Facções, frentes, mapas, história... apenas o que cria jogabilidade.</small>
+    <small>Segurança, expectativas, ritmo, conflitos, debrief.</small>
   </p>
 </Card>
 
-<Card title="Operações de Campanha">
+<Card title="Trilha 2 — Sessão">
   <p>
-    <Badge text="Planejado" variant="note" /> Mantenha continuidade sem se tornar um bibliotecári.
+    <Badge text="Planejado" variant="note" /> Conduza sessões fortes com pouco preparo.
   </p>
   <p>
-    <small>
-      Anotações, resumos, acompanhamento, publicação e campanhas de longo prazo sustentáveis.
-    </small>
+    <small>Cenas, pistas, improviso estruturado, escolhas.</small>
+  </p>
+</Card>
+
+<Card title="Trilha 3 — Desafios &amp; Conflito">
+  <p>
+    <Badge text="Planejado" variant="note" /> Desenhe encontros justos e variados.
+  </p>
+  <p>
+    <small>Combate e não-combate, perigos, puzzles, mobs, controle de NPCs.</small>
+  </p>
+</Card>
+
+<Card title="Trilha 4 — Campanhas">
+  <p>
+    <Badge text="Planejado" variant="note" /> Escale de one-shots a mundos vivos.
+  </p>
+  <p>
+    <small>Motores, estilos, NPCs recorrentes, arcos de PCs, encontros.</small>
+  </p>
+</Card>
+
+<Card title="Trilha 5 — Criação de Mundos">
+  <p>
+    <Badge text="Planejado" variant="note" /> Construa mundos a serviço do jogo.
+  </p>
+  <p>
+    <small>Verdades, camadas de escopo, história útil, mapas.</small>
+  </p>
+</Card>
+
+<Card title="Trilha 6 — Publicação">
+  <p>
+    <Badge text="Planejado" variant="note" /> Empacote seu trabalho para outras mesas.
+  </p>
+  <p>
+    <small>Escrita para mesa, playtest, layout, formatos.</small>
   </p>
 </Card>
 
@@ -100,14 +116,14 @@ import {
 ## Próximos Passos
 
 <CardGrid>
-  <LinkCard
+  <DocLinkCard
     title="Comece Aqui"
-    href="./start-here/"
+    href="start-here"
     description="Dê início à sua rotina de estudos e entregue sua primeira pequena missão."
   />
-  <LinkCard
+  <DocLinkCard
     title="Como Funciona"
-    href="./how-it-works/"
+    href="how-it-works"
     description="Entenda a estrutura de lição → exercício → projeto e a mentalidade de 'entregar'."
   />
 </CardGrid>

@@ -28,6 +28,9 @@ Everything else stays English until it becomes a bottleneck.
 - English (default): `site/src/content/docs/...`
 - Other languages: `site/src/content/docs/<locale>/...` (for example, Portuguese: `site/src/content/docs/pt-br/...`)
 
+Locale folder format is always `xx-yy` (two letters + dash + two letters), with the last two in
+lowercase (example: `pt-br`).
+
 Paths should mirror each other whenever possible.
 
 Example:
@@ -57,19 +60,19 @@ This ensures:
 
 ## Links inside MD/MDX
 
-Use **relative links** whenever possible, especially in localized pages.
+Use the `DocLink` component for internal links. It respects the `base` path and auto-adds the
+locale prefix when needed. Locale detection follows the `xx-yy/` folder pattern.
 
-Good (respects base paths like GitHub Pages):
+Example:
 
-- `./start-here/`
-- `../tracks/gm-101/`
+```mdx
+import DocLink from '../_components/DocLink.astro';
 
-Avoid absolute links:
+<DocLink href="start-here">Start Here</DocLink>
+```
 
-- `/pt-br/start-here/`
-- `/start-here/`
-
-Absolute links may break when the site is deployed under a subpath.
+Avoid absolute links like `/start-here/` or `/pt-br/start-here/` because they can break under a
+subpath and won’t adapt to locale.
 
 ## How to translate a page
 
